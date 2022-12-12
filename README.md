@@ -1,4 +1,3 @@
-
 <div align="center">
   <a href="https://github.com/kcvdk3101">
     <img src="./dblog-logo.svg" alt="dblog-logo" width="150">
@@ -36,6 +35,14 @@ yarn test
 ```bash
 yarn test:unit
 ```
+
+# Environemnt variables
+
+| KEY              | VALUE          
+| -----------------|----------------|
+| *DB_CONN_STRING* | `mongodb+srv://<username>:<password>@<cluster>.mongodb.net/test`
+| *DB_NAME*        | `your-mongo-db-name`     
+| *PORT*           | `your-port`   
 
 # Technology Stack
 
