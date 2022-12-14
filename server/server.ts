@@ -1,38 +1,21 @@
-import http from 'http'
-
 import dotenv from 'dotenv'
-import express, { Express, NextFunction, Request, Response } from 'express'
-import mongoose from 'mongoose'
+import express, { Express, Request, Response } from 'express'
 
-import { MONGO_URL } from './config/config'
+import { connectDatabase } from './src/services/database.service'
+import { logService } from './src/services/log.service'
 
 dotenv.config()
 
 const app: Express = express()
 const port = process.env.PORT || 8000
 
-// Connect to mongodb
-mongoose.set('strictQuery', false)
-mongoose
-  .connect(MONGO_URL, {
-    retryWrites: true,
-    writeConcern: {
-      w: 'majority',
-    },
-  })
-  .then((response) => {
-    console.log(
-      `[server]: Server is connected to MongoDB with HOST: ${response.connection.host}`,
-    )
-  })
-  .catch(() => {
-    console.error(`[server]: Connection between Server and MongoDB is fail`)
-  })
+// Connect to MongoDB
+connectDatabase()
 
-app.get('/', (req: Request, res: Response, next: NextFunction) => {
+app.get('/', (req: Request, res: Response) => {
   res.send('Express + Typescript Server connected')
 })
 
 app.listen(port, () => {
-  console.log(`[server]: Server is running at https://localhost:${port}`)
+  logService.Info(`Server is running at https://localhost:${port}`)
 })
