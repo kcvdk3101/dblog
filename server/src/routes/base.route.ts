@@ -41,7 +41,3 @@ router.use((req: Request, res: Response, next: NextFunction) => {
 
   next()
 })
-
-/**
- * Health check
- */
