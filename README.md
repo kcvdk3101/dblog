@@ -9,18 +9,20 @@
 # Installation
 
 ```bash
-yarn
+git clone https://github.com/kcvdk3101/dblog
 ```
 
 # Usage
 
 ## Server
 ```bash
-yarn dev
+cd server
+yarn start:dev
 ```
 
 ## Client
 ```bash
+cd client
 yarn dev
 ```
 

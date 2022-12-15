@@ -20,10 +20,10 @@
     "email": "kcvdk2000@gmail.com",
     "url": "https://github.com/kcvdk3101"
   },
-  "main": "server.ts",
+  "main": "src/server.ts",
   "scripts": {
     "build": "npx tsc",
-    "start:dev": "nodemon server.ts",
+    "start:dev": "nodemon src/server.ts",
     "lint": "eslint . --ext .ts"
   },
   "dependencies": {
