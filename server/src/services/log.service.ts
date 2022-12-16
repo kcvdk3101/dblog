@@ -3,28 +3,28 @@
 import chalk from 'chalk'
 
 export class LogService {
-  public Success<T>(message: T) {
+  public success<T>(message: T) {
     console.log(
       chalk.green(`[${new Date().toLocaleString()}] [CONGRA 🏆]`),
       chalk.greenBright(message),
     )
   }
 
-  public Info<T>(message: T) {
+  public info<T>(message: T) {
     console.log(
       chalk.blue(`[${new Date().toLocaleString()}] [INFO 😎]`),
       chalk.blueBright(message),
     )
   }
 
-  public Warning<T>(message: T) {
+  public warning<T>(message: T) {
     console.log(
       chalk.yellow(`[${new Date().toLocaleString()}] [WARNING 🤔]`),
       chalk.yellowBright(message),
     )
   }
 
-  public Error<T>(message: T) {
+  public error<T>(message: T) {
     console.log(
       chalk.red(`[${new Date().toLocaleString()}] [ERROR 😞]`),
       chalk.redBright(message),

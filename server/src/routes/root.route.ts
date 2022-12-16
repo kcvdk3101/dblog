@@ -7,15 +7,16 @@ import {
   urlencoded,
 } from 'express'
 
+import { healthCheckRouter } from '../services/healthcheck.service'
 import { logService } from '../services/log.service'
 
 const router = Router()
 
 router.use((req: Request, res: Response, next: NextFunction) => {
-  logService.Info(`Url:${req.url}`)
+  logService.info(`Url:${req.url}`)
 
   res.on('finish', () => {
-    logService.Info(`Url:${req.url} - Status:${req.statusCode}`)
+    logService.info(`Url:${req.url} - Status:${req.statusCode}`)
   })
 
   next()
@@ -41,3 +42,17 @@ router.use((req: Request, res: Response, next: NextFunction) => {
 
   next()
 })
+
+/**
+ * All routes
+ */
+router.get('/', (req: Request, res: Response) => {
+  res.send('Express + Typescript Server connected')
+})
+
+/**
+ * Health check
+ */
+healthCheckRouter(router)
+
+export { router }

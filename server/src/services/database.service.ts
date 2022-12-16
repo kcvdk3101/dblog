@@ -13,9 +13,9 @@ export const connectDatabase = async () => {
       },
     })
     .then(() => {
-      logService.Success('Connected to MongoDB')
+      logService.success('Connected to MongoDB')
     })
     .catch(() => {
-      logService.Error('Connection between Server and MongoDB is fail')
+      logService.error('Connection between Server and MongoDB is fail')
     })
 }

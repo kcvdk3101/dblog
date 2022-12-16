@@ -17,5 +17,5 @@ connectDatabase()
  * Start server
  */
 export const server = app.listen(port, () => {
-  logService.Info(`Server is running at http://localhost:${port}`)
+  logService.info(`Server is running at http://localhost:${port}`)
 })

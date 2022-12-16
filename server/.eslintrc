@@ -14,8 +14,7 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:jsdoc/recommended",
-    "prettier"
+    "plugin:jsdoc/recommended"
   ],
   "rules": {
     "jsdoc/no-undefined-types": "off",
