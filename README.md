@@ -64,3 +64,7 @@ yarn test:unit
 # License
 Copyright (c) 2022-2023 [Khoi Vuong](https://github.com/kcvdk3101).<br />
 This project is [MIT](./LICENSE) licensed.
+
+# References
+
+[How to Handle Errors in Express with TypeScript](https://www.codeconcisely.com/posts/how-to-handle-errors-in-express-with-typescript/)

@@ -7,6 +7,7 @@ import {
   urlencoded,
 } from 'express'
 
+import { errorHandler } from '../middlewares/errorHandler'
 import { healthCheckRouter } from '../services/healthcheck.service'
 import { logService } from '../services/log.service'
 
@@ -41,6 +42,10 @@ router.use((req: Request, res: Response, next: NextFunction) => {
   }
 
   next()
+})
+
+router.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+  errorHandler.handleError(err, res)
 })
 
 /**

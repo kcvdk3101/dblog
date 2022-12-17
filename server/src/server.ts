@@ -1,3 +1,5 @@
+import './errors/process'
+
 import dotenv from 'dotenv'
 
 import { app } from './app'
@@ -13,9 +15,6 @@ const port = process.env.PORT || 8000
  */
 connectDatabase()
 
-/**
- * Start server
- */
 export const server = app.listen(port, () => {
   logService.info(`Server is running at http://localhost:${port}`)
 })
