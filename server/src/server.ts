@@ -2,13 +2,13 @@ import './errors/process'
 
 import http from 'http'
 
-import dotenv from 'dotenv'
+import { config } from 'dotenv'
 import { createHttpTerminator } from 'http-terminator'
 
 import { app } from './app'
 import { connectDatabase } from './services/database.service'
 
-dotenv.config()
+config()
 
 /**
  * Connect to MongoDB
