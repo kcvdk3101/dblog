@@ -11,7 +11,7 @@ export default defineComponent({
 
 <template>
   <HeaderComponent />
-  <RouterView />
+  <!-- <RouterView /> -->
 </template>
 
 <style scoped></style>
